@@ -25,3 +25,5 @@
 /vendors/*
 
 ARAC/nbproject/private/
+
+ARAC/entidades/Database\.php
