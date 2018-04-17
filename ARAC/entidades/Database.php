@@ -2,7 +2,7 @@
 
 Class Database
 {
-    
+    //Comentario de prueba
     public static function StartUp(){
         $hostname = "localhost";
         $dbname = "arac";
