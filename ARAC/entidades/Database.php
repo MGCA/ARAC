@@ -4,8 +4,7 @@ Class Database
 {
     
     public static function StartUp(){
-        $hostname = "127.0.0.1:3309";
-//        $hostname = "localhost";
+        $hostname = "localhost";
         $dbname = "arac";
         $username = "root";
         $pwd = "";
