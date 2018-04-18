@@ -40,4 +40,13 @@ class Socio {
         }
     }
 
+    public function Registrar(Socio $data) {
+        try {
+            $sql = "INSERT INTO socio (cedula,nombre,primerApellido,segundoApellido,telefono,correo,direccion)"
+                    . "VALUE ()";
+        } catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
+    }
+
 }
