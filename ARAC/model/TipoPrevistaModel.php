@@ -1,15 +1,11 @@
 <?php
 
-class Empleado {
+class TipoPrevista {
 
     private $pdo;
-    public $cedula;
-    public $nombre;
-    public $primerApellido;
-    public $segundoApellido;
-    public $direccion;
-    public $telefono;
-    public $puesto;
+    public $idTipo;
+    public $tarifaMes;
+    public $tipoPrevista;
 
     public function __construct() {
         try {
@@ -23,7 +19,7 @@ class Empleado {
         try {
             $result = array();
 
-            $stm = $this->pdo->prepare("SELECT * FROM empleado");
+            $stm = $this->pdo->prepare("SELECT * FROM tipoprevista");
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $exc) {
@@ -33,7 +29,8 @@ class Empleado {
 
     public function Obtener($id) {
         try {
-            $stm = $this->pdo->prepare("SELECT *FROM empleado WHERE cedula = ?");
+            $stm = $this->pdo
+                    ->prepare("SELECT * FROM tipoprevista WHERE idTipo = ?");
             $stm->execute(array($id));
             return $stm->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $exc) {
@@ -41,12 +38,12 @@ class Empleado {
         }
     }
 
-    public function Registrar(Empleado $data) {
+    public function Registrar(TipoPrevista $data) {
         try {
-            $sql = "INSERT INTO empleado (cedula,nombre,primerApellido,segundoApellido,direccion,telefono,puesto)"
-                    . "VALUE (?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO tipoprevista (idTipo,tarifaMes,tipoPrevista)"
+                    . "VALUE (?,?,?)";
             $this->pdo->prepare($sql)
-                    ->execute(array($data->cedula, $data->nombre, $data->primerApellido, $data->segundoApellido, $data->direccion, $data->telefono, $data->puesto)
+                    ->execute(array($data->idTipo, $data->tarifaMes, $data->tipoPrevista)
             );
         } catch (Exception $exc) {
             die ($exc->getMessage());
