@@ -32,36 +32,11 @@ class Socio {
 
     public function Obtener($id) {
         try {
-            $stm = $this->pdo
-                    ->prepare("SELECT * FROM socio WHERE cedula = ?");
-            
+            $stm = $this->pdo->prepare("SELECT * FROM socio WHERE cedula = ?");
             $stm->execute(array($id));
             return $stm->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $exc) {
             die($exc->getMessage());
-        }
-    }
-
-    public function Registrar(Socio $data) {
-        try {
-            $sql = "INSERT INTO socio (cedula,nombre,primerApellido,segundoApellido,telefono,correo,direccion)
-                        VALUE (?,?,?,?,?,?,?)";
-            
-            $this->pdo->prepare($sql)
-                    ->execute(array($data->cedula, $data->nombre, $data->primerApellido, $data->segundoApellido, $data->correo, $data->direccion)
-            );
-        } catch (Exception $exc) {
-            die($exc->getMessage());
-        }
-    }
-    public function Eliminar($id) {
-        try {
-            $stm = $this->pdo
-                    ->prepare("DELETE FROM socio WHERE cedula = ?");
-
-            $stm->execute(array($id));
-        } catch (Exception $e) {
-            die($e->getMessage());
         }
     }
 
