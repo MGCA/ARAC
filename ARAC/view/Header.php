@@ -10,7 +10,7 @@
 
     </head>    
     <body>
-        <header>
+        <header>  
             <nav class="navbar navbar-default navbar-static-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -20,31 +20,23 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.php">Inicio</a>
+                        <a class="navbar-brand" href="Index.php">Inicio</a>
                     </div>
                     <div id="navbar" class="navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="view/presentacion/tramites.php">Tramites</a></li>
-                            <li><a href="view/presentacion/noticias.php">Noticias</a></li>
-                            <li><a href="view/presentacion/informacion.php">Informacion</a></li>
+                            <li><a href="?c=Tramites&a=Index">Tramites</a></li>
+                            <li><a href="?c=Noticias&a=Index">Noticias</a></li>
+                            <li><a href="?c=Informacion&a=Index">Informacion</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-
-                            <li>
-                                <a href="#">
-                                    <span class="glyphicon glyphicon-user " aria-hidden="true"></span>
-
-                                </a>
-                            </li>
-
                             <li>
                                 <a href="view/presentacion/sesion/ingresar.php">
                                     <span class="glyphicon glyphicon-log-in " aria-hidden="true"></span>
-                                    Iniciar Sesión
+                                    Salir
                                 </a>
                             </li>
                             <li>
-                                <a href="view/matenimiento/mantenimiento.php">
+                                <a href="?c=HomeMantenimiento&a=Index">
                                     <span class="glyphicon glyphicon-edit " aria-hidden="true"></span>
                                     Mantenimiento
                                 </a>

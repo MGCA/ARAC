@@ -52,5 +52,28 @@ class Empleado {
             die ($exc->getMessage());
         }
     }
+    
+    public function Eliminar($id) {
+        try {
+            $stm = $this->pdo
+                    ->prepare("DELETE FROM socio WHERE cedula = ?");
+
+            $stm->execute(array($id));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    public function Actualizar($data) {
+        try {
+            $sql = "UPDATE empleado SET cedula = ? ,nombre = ? ,primerApellido = ? ,segundoApellido = ? ,telefono = ? ,puesto = ?";
+            
+            $this->pdo->prepare($sql)
+                    ->execute(array($data->cedula, $data->nombre, $data->primerApellido, $data->segundoApellido, $data->telefono, $data->puesto)
+            );
+        } catch (Exception $exc) {
+            die($exc->getMessage());
+        }
+    }
 
 }

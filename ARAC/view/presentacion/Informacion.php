@@ -1,15 +1,3 @@
-<link href="../../archivos/css/bootstrap.min.css" rel="stylesheet">
-<link href="../../archivos/css/estilos.css" rel="stylesheet">
 <div class="container">
-    <div class="panel-heading">
-        <h3 class="panel-title">
-            Informacion
-        </h3>
-
-    </div>
-    <div class="panel-body">
-        
-    </div>
+    <p>Esta Area es esclusiva para realizar el mantenimiento del sistema</p>
 </div>
-<script src="../../archivos/js/jquery.min.js"></script>
-<script src="../../archivos/js/bootstrap.min.js"></script>
