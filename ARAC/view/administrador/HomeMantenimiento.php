@@ -1,9 +1,4 @@
-<link href="../../archivos/css/bootstrap.min.css" rel="stylesheet">
-<link href="../../archivos/css/estilos.css" rel="stylesheet">
 <div class="container">
-    <div class="jumbotron">
-        <h1 class="text-center">Mantenimiento del Sistema</h1>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -23,7 +18,7 @@
                             contacte a soporte tecnico del sistema.     
                         </p>
                         <br>
-                        <a href="mantenimientoUsuario/nuevoUsuario.php">Ya tienes un Usuario?</a>
+                        <a href="Usuario/nuevoUsuario.php">Ya tienes un Usuario?</a>
                         <br>
                         <br>
                         <a href="#">Olvidaste tu contraseña?</a>
@@ -56,5 +51,3 @@
         </div>
     </div>
 </div>
-<script src="../../archivos/js/jquery.min.js"></script>
-<script src="../../archivos/js/bootstrap.min.js"></script>
