@@ -51,7 +51,7 @@ class Recibo {
 
     public function Actualizar($data) {
         try {
-            $sql = "UPDATE socio SET cedula = ? ,nombre = ? ,primerApellido = ? ,segundoApellido = ? ,telefono = ? ,correo,direccion = ?";
+            $sql = "UPDATE socio SET cedula = ? ,nombre = ? ,primerApellido = ? ,segundoApellido = ? ,telefono = ? ,correo = ? ,direccion = ?";
             
             $this->pdo->prepare($sql)
                     ->execute(array($data->cedula, $data->nombre, $data->primerApellido, $data->segundoApellido, $data->telefono, $data->correo, $data->direccion)

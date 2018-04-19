@@ -43,8 +43,8 @@ class Empleado {
 
     public function Registrar(Empleado $data) {
         try {
-            $sql = "INSERT INTO empleado (cedula,nombre,primerApellido,segundoApellido,direccion,telefono,puesto)"
-                    . "VALUE (?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO empleado (cedula,nombre,primerApellido,segundoApellido,direccion,telefono,puesto)
+                    VALUE (?,?,?,?,?,?,?)";
             $this->pdo->prepare($sql)
                     ->execute(array($data->cedula, $data->nombre, $data->primerApellido, $data->segundoApellido, $data->direccion, $data->telefono, $data->puesto)
             );
