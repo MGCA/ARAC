@@ -2,7 +2,7 @@
 
 Class Database
 {
-    
+    //Comentario de pru
     public static function StartUp(){
         $hostname = "localhost";
         $dbname = "arac";
