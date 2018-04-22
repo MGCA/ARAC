@@ -1,5 +1,6 @@
 <?php 
-
+require_once 'entidades/EmpleadoModel.php';
+require_once 'entidades/Database';
 class empleadoController {
 
     private $modelEmpleado;
