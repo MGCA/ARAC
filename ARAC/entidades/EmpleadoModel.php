@@ -11,18 +11,18 @@ class Empleado{
     public $telefono;
     public $puesto;
     
-    
-    public function __CONSTRUCT()
-	{
-		try
-		{
-			$this->pdo = Database::StartUp();     
-		}
-		catch(Exception $e)
-		{
-			die($e->getMessage());
-		}
-	}
+//    
+//    public function __CONSTRUCT()
+//	{
+//		try
+//		{
+//			$this->pdo = Database::StartUp();     
+//		}
+//		catch(Exception $e)
+//		{
+//			die($e->getMessage());
+//		}
+//	}
 
 	public function Listar()
 	{
