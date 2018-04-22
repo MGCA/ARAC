@@ -1,6 +1,6 @@
-<?php
+<?php 
 
-class EmpleadoMantenimientoController {
+class empleadoController {
 
     private $modelEmpleado;
 
@@ -9,7 +9,9 @@ class EmpleadoMantenimientoController {
     }
 
     public function Index() {
-        
+        require_once 'view/HeaderMantenimiento.php';
+        require_once 'view/administrador/Empleado/empleado.php';
+        require_once 'view/Footer.php';
     }
     
     public function Editar(){
@@ -54,7 +56,7 @@ class EmpleadoMantenimientoController {
     }
     
     public function Eliminar(){
-        $this->modelProd->Eliminar($_REQUEST['idProducto']);
+        $this->modelEmpleado->Eliminar($_REQUEST['idProducto']);
         header('Location: index.php');
     }
 
