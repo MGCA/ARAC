@@ -7,6 +7,7 @@
         <title>SISTEMA ARAC</title>
         <link href="archivos/css/bootstrap.min.css" rel="stylesheet">
         <link href="archivos/css/estilos.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     </head>    
     <body>
@@ -24,9 +25,9 @@
                     </div>
                     <div id="navbar" class="navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="?c=Tramites&a=Index">Tramites</a></li>
-                            <li><a href="?c=Noticias&a=Index">Noticias</a></li>
-                            <li><a href="?c=Informacion&a=Index">Informacion</a></li>
+                            <li><a href="?c=Recibo&a=Index">Recibo</a></li>
+                            <li><a href="?c=Compra&a=Index">Compra</a></li>
+                            <li><a href="?c=Inventario&a=Index">Inventario</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li>

@@ -35,7 +35,7 @@ class Empleado {
         try {
             $stm = $this->pdo->prepare("SELECT *FROM empleado WHERE cedula = ?");
             $stm->execute(array($id));
-            return $stm->fetchAll(PDO::FETCH_OBJ);
+            return $stm->fetch(PDO::FETCH_OBJ);
         } catch (Exception $exc) {
             die($exc->getMessage());
         }

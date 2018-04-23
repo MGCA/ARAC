@@ -10,15 +10,14 @@
 
     </head>    
     <body>
-        <header>
-            <div class="container">
+        <div class="container">
+            <header>
+
                 <div class="jumbotron">
                     <h1 class="text-center">Mantenimiento del Sistema</h1>
                 </div>
-            </div>
 
-            <div class="container">
-                <nav class="navbar navbar-default navbar-static-top">
+                <nav class="navbar navbar-default ">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Este boton despliega la barra de navegacion</span>
@@ -26,7 +25,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="?c=HomeMantenimiento&a=Index"  class="navbar-brand">Inicio</a>
+                        <a class="navbar-brand" href="?c=HomeMantenimiento&a=Index">Inicio</a>
                     </div>
                     <div id="navbar" class="navbar-collapse">
                         <ul class="nav navbar-nav">
@@ -45,6 +44,8 @@
                             </li>
                         </ul>
                     </div>
-                </nav>
-            </div>
-        </header>
+                </nav> 
+            </header>
+        </div>
+        <div class="container">
+

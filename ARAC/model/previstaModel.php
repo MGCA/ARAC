@@ -32,7 +32,7 @@ class Prevista {
         try {
             $stm = $this->pdo->prepare("SELECT * FROM prevista WHERE numPrevista = ?");
             $stm->execute(array($id));
-            return $stm->fetchAll(PDO::FETCH_OBJ);
+            return $stm->fetch(PDO::FETCH_OBJ);
         } catch (Exception $exc) {
             die($exc->getMessage());
         }
@@ -47,6 +47,31 @@ class Prevista {
             );
         } catch (Exception $exc) {
             die ($exc->getMessage());
+        }
+    }
+    
+    public function Actualizar($data) {
+        try {
+            $sql = "UPDATE prevista SET ubicacion = ?, tipoPrevista = ?, dueño = ? WHERE numPrevista = ?";
+            
+            $this->pdo->prepare($sql)
+                    ->execute(array($data->ubicacion, $data->tipoPrevista, $data->dueño, $data->numPrevista)
+            );
+        } catch (Exception $exc) {
+            die($exc->getMessage());
+        }
+    }
+    
+    public function Guardar(Prevista $data) {
+        try {
+            $sql = "INSERT INTO prevista (numPrevista,ubicacion,tipoPrevista,dueño)
+                        VALUE (?,?,?,?)";
+
+            $this->pdo->prepare($sql)
+                    ->execute(array($data->numPrevista, $data->ubicacion, $data->tipoPrevista, $data->dueño)
+            );
+        } catch (Exception $exc) {
+            die($exc->getMessage());
         }
     }
 

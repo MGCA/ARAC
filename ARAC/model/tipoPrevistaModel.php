@@ -32,7 +32,7 @@ class TipoPrevista {
             $stm = $this->pdo
                     ->prepare("SELECT * FROM tipoprevista WHERE idTipo = ?");
             $stm->execute(array($id));
-            return $stm->fetchAll(PDO::FETCH_OBJ);
+            return $stm->fetch(PDO::FETCH_OBJ);
         } catch (Exception $exc) {
             die($exc->getMessage());
         }
