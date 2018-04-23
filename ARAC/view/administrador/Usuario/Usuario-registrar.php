@@ -8,10 +8,10 @@
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" method="post" action="registro_action.php">
+                        <form role="form" method="post" action="?c=UsuarioMantenimiento&a=Guardar">
                             <div class="form-group">
                                 <label>Nombre de Usuario</label>
-                                <input type="text" class="form-control" name="nomUsuario" placeholder="usuario">
+                                <input type="text" class="form-control" name="nombreUsuario" placeholder="usuario">
                             </div>
                             <div class="form-group">
                                 <label>contraseña</label>
@@ -19,11 +19,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Repite la contraseña</label>
-                                <input type="password" class="form-control" name="clave2" placeholder="repet-password">
+                                <input type="password" class="form-control" name="password" placeholder="repet-password">
                             </div>
                             <div class="form-group">
                                 <label>Cedula Empleado</label>
-                                <input type="text" class="form-control" name="idEmpleado" placeholder="cedula">
+                                <input type="text" class="form-control" name="empleado" placeholder="cedula">
                             </div>
                             <br>
                             <button type="submit" class="btn btn-default" name="submit">Aceptar</button>

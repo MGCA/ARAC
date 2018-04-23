@@ -41,7 +41,7 @@ class Empleado {
         }
     }
 
-    public function Registrar(Empleado $data) {
+    public function Registrar($data) {
         try {
             $sql = "INSERT INTO empleado (cedula,nombre,primerApellido,segundoApellido,direccion,telefono,puesto)
                     VALUE (?,?,?,?,?,?,?)";
@@ -56,7 +56,7 @@ class Empleado {
     public function Eliminar($id) {
         try {
             $stm = $this->pdo
-                    ->prepare("DELETE FROM socio WHERE cedula = ?");
+                    ->prepare("DELETE FROM empleado WHERE cedula = ?");
 
             $stm->execute(array($id));
         } catch (Exception $e) {
@@ -66,10 +66,10 @@ class Empleado {
     
     public function Actualizar($data) {
         try {
-            $sql = "UPDATE empleado SET cedula = ? ,nombre = ? ,primerApellido = ? ,segundoApellido = ? ,telefono = ? ,puesto = ?";
+            $sql = "UPDATE empleado SET nombre = ? ,primerApellido = ? ,segundoApellido = ? ,direccion = ? ,telefono = ? ,puesto = ? WHERE cedula = ?";
             
             $this->pdo->prepare($sql)
-                    ->execute(array($data->cedula, $data->nombre, $data->primerApellido, $data->segundoApellido, $data->telefono, $data->puesto)
+                    ->execute(array($data->nombre, $data->primerApellido, $data->segundoApellido, $data->direccion, $data->telefono, $data->puesto, $data->cedula)
             );
         } catch (Exception $exc) {
             die($exc->getMessage());

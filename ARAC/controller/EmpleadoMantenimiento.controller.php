@@ -1,7 +1,8 @@
 <?php 
-require_once 'model/empleadoModel.php';
-//require_once 'entidades/Database';
-class empleadoController {
+
+require_once 'model/EmpleadoModel.php';
+
+class EmpleadoMantenimientoController {
 
     private $modelEmpleado;
 
@@ -11,7 +12,7 @@ class empleadoController {
 
     public function Index() {
         require_once 'view/HeaderMantenimiento.php';
-        require_once 'view/administrador/Empleado/empleado.php';
+        require_once 'view/administrador/Empleado/EmpleadoMantenimiento.php';
         require_once 'view/Footer.php';
     }
     
@@ -21,23 +22,19 @@ class empleadoController {
         if(isset($_REQUEST['cedula'])){
             $alm = $this->modelEmpleado->Obtener($_REQUEST['cedula']);
             require_once 'view/HeaderMantenimiento.php';
-            require_once 'view/administrador/Empleado/empleado-editar.php';
+            require_once 'view/administrador/Empleado/Empleado-editar.php';
+            require_once 'view/Footer.php';
         }
         else {
             echo '<script>alert("Debe seleccionar un Empleado")</script>';
-            echo '<script>location.href="?cEmpleado&a=Index"</script>';
+            echo '<script>location.href="?c=EmpleadoMantenimiento&a=Index"</script>';
         }
     }
     
     public function Registrar(){
-        $alm = new Empleado();
-        
-        if(isset($_REQUEST['cedula'])){
-            $alm = $this->modelEmpleado->Obtener($_REQUEST['cedula']);
-        }
-        
         require_once 'view/HeaderMantenimiento.php';
-        require_once 'view/administrador/Empleado/producto-editar.php';
+        require_once 'view/administrador/Empleado/Empleado-registrar.php';
+        require_once 'view/Footer.php';
     }
     
     public function Guardar(){
@@ -47,18 +44,24 @@ class empleadoController {
         $alm->nombre = $_REQUEST['nombre'];
         $alm->primerApellido = $_REQUEST['primerApellido'];
         $alm->segundoApellido = $_REQUEST['segundoApellido'];
+        $alm->direccion = $_REQUEST['direccion']; 
         $alm->telefono = $_REQUEST['telefono']; 
         $alm->puesto = $_REQUEST['puesto']; 
         $this->modelEmpleado->Obtener($_REQUEST['cedula'])?
                          $this->modelEmpleado->Actualizar($alm):
                          $this->modelEmpleado->Registrar($alm);
               
-        header('Location: index.php');
+        header('Location: ?c=EmpleadoMantenimiento&a=Index');
     }
     
-    public function Eliminar(){
-        $this->modelEmpleado->Eliminar($_REQUEST['idProducto']);
-        header('Location: index.php');
+    public function Eliminar() {
+        if (isset($_REQUEST['cedula'])) {
+            $this->modelEmpleado->Eliminar($_REQUEST['cedula']);
+            header('Location: ?c=EmpleadoMantenimiento&a=Index');
+        } else {
+            echo '<script>alert("Debe seleccionar un Empleado")</script>';
+            echo '<script>location.href="?c=EmpleadoMantenimiento&a=Index"</script>';
+        }
     }
 
 }
