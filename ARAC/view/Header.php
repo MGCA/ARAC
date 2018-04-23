@@ -26,7 +26,7 @@
                     <div id="navbar" class="navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="?c=Recibo&a=Index">Recibo</a></li>
-                            <li><a href="?c=Compra&a=Index">Compra</a></li>
+                            <li><a href="?c=CompraMantenimiento&a=Index">Compra</a></li>
                             <li><a href="?c=Inventario&a=Index">Inventario</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">

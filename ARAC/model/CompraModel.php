@@ -8,8 +8,8 @@ class Compra{
     public $nombreNegocio;
     public $motivoCompra;
     public $lugarCompra;
-    public $montoTotalCompra;
     public $fecha;
+    public $montoTotalCompra;
     
     public function __construct() {
         try {
@@ -43,4 +43,40 @@ class Compra{
         }
     }
     
+     public function Registrar($data) {
+        try {
+            $sql = "INSERT INTO compra (encargadoCompra, nombreNegocio, motivoCompra, lugarCompra, fecha, montoTotalCompra)
+                        VALUE (?,?,?,?,?,?)";
+
+            $this->pdo->prepare($sql)
+                    ->execute(array($data->encargadoCompra, $data->nombreNegocio, $data->motivoCompra, $data->lugarCompra, $data->fecha, $data->montoTotalCompra)
+            );
+        } catch (Exception $exc) {
+            die($exc->getMessage());
+        }
+    }
+    
+    public function Eliminar($id) {
+        try {
+            $stm = $this->pdo
+                    ->prepare("DELETE FROM compra WHERE numCompra = ?");
+
+            $stm->execute(array($id));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    public function Actualizar($data) {
+        try {
+            $sql = "UPDATE compra SET encargadoCompra = ?, nombreNegocio = ?, motivoCompra = ?, lugarCompra = ?, fecha = ?, montoTotalCompra = ? WHERE numCompra = ?";
+            
+            $this->pdo->prepare($sql)
+                    ->execute(array($data->encargadoCompra, $data->nombreNegocio, $data->motivoCompra, $data->lugarCompra, $data->fecha, $data->montoTotalCompra, $data->numCompra)
+            );
+        } catch (Exception $exc) {
+            die($exc->getMessage());
+        }
+    }
+
 }

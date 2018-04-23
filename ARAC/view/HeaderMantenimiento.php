@@ -30,9 +30,9 @@
                     <div id="navbar" class="navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="?c=SocioMantenimiento&a=Index">Socio</a></li>
-                            <li><a href="?c=Empleado&a=Index">Empleado</a></li>
+                            <li><a href="#">Empleado</a></li>
                             <li><a href="#">Inventario</a></li>
-                            <li><a href="?c=compras&a=Index">Compras</a></li>
+                            <li><a href="?c=CompraMantenimiento&a=Index">Compras</a></li>
                             <li><a href="?c=Recibo&a=Consultar">Recibo</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
