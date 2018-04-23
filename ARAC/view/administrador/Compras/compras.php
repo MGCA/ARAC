@@ -3,9 +3,9 @@
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Compras
-                    </h3>
+                <h3 class="panel-title">
+                    Compras
+                </h3>
             </div>
             <div class="panel-body">
                 <div class="panel panel-default">
@@ -18,18 +18,18 @@
                                 </button>
                             </div>
                         </div>
-                        
+
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="#"><button class="btn btn-primary">Borrar</button></a>                                
                             </li>
                             <li>
                                 <a href="#"><button class="btn btn-primary">Editar</button></a>
-                                
+
                             </li>
                             <li>
                                 <a href="#"><button class="btn btn-primary">Nuevo</button></a>
-                                
+
                             </li>
 
                         </ul>
@@ -49,7 +49,7 @@
                                     <th>City</th>
                                     <th>Country</th>
                                     <th>Sex</th>
-                                   
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,11 +61,11 @@
                                     <td>New York</td>
                                     <td>USA</td>
                                     <td>Female</td>
-                                    
+
                                 </tr>
                             </tbody>
-    </table>
-  </div>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

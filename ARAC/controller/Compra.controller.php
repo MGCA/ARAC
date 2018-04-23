@@ -1,7 +1,8 @@
 <?php
-
+require_once 'model/CompraModel.php';
 class CompraController
 {        
+    private $modelCompra;
     public function Index()
     {
         require_once 'view/Header.php';

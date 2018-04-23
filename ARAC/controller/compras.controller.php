@@ -1,5 +1,5 @@
 <?php
-require_once 'entidades/CompraModel.php';
+require_once 'model/compraModel.php';
 //require_once 'entidades/Database';
 
 class comprasController
