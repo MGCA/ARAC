@@ -33,15 +33,15 @@
             </div>
             <div class="panel-body">
                 <ul class="nav-divider">
-                    <li><a href="/plantillaRegistro/encabezadoPrevista.php">Acueducto</a></li>
+                    <li><a href="?c=PrevistaMantenimiento&a=Index">Prevista</a></li>
                     <br>
-                    <li><a href="../ARAC/plantillaRegistro/encabezadoEmpleado.php">Empleados</a></li>
+                    <li><a href="#">Usuarios</a></li>
                     <br>
-                    <li><a href="/plantillaRegistro/encabezadoSocio.php">Socios</a></li>
+                    <li><a href="#">Socios</a></li>
                     <br>
-                    <li><a href="/plantillaRegistro/encabezadoInventario.php">Inventario</a></li>
+                    <li><a href="#">Inventario</a></li>
                     <br>
-                    <li><a href="/plantillaRegistro/encabezadoCompra.php">Compras</a></li>
+                    <li><a href="#">Compras</a></li>
                 </ul>
             </div>
         </div>

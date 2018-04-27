@@ -49,9 +49,12 @@
             <input type="text" name="numPrevista"class="form-control" placeholder="Ingrese el Nª de Prevista" data-validacion-tipo="requerido" />
         </div>
 
-        <div id="estadoRadio" class="form-group">
+        <div name="estadoRadio" id="estadoRadio" class="form-group">
             <label>Estado: </label>
-            <input  type="radio" name="estado" class="radio-inline" data-validacion-tipo="requerido" />
+            <div class="radio form-control">
+                <label><input type="radio" name="estado" value=0>Pendiente</label>
+                <label><input type="radio" name="estado" value=1>Cancelado</label>
+            </div>
         </div>   
 
         <div class="text-right">
@@ -62,8 +65,8 @@
         $(document).ready(function () {
             $("#frm-recibo").submit(function () {
                 return $(this).validate();
+                alert($('input:radio[name=estado]:checked').val());
             });
-
         });
     </script>
 </div>

@@ -41,6 +41,17 @@ class Recibo {
             die($exc->getMessage());
         }
     }
+    
+    public function CancelarRecibo($numPrevista, $mes){
+        try {
+            $stm = $this->pdo
+                    ->prepare("SELECT numPrevista, mes FROM recibo WHERE numPrevista = ?, mes = ?");
+            $stm->execute(array($numPrevista,$mes));
+            return $stm->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $exc) {
+            die($exc->getMessage());
+        }
+    }
 
     public function Registrar(Recibo $data) {
 
