@@ -28,6 +28,18 @@ class Prevista {
         }
     }
 
+    public function NumPrevista() {
+        try {
+            $result = array();
+
+            $stm = $this->pdo->prepare("SELECT numPrevista FROM recibo");
+            $stm->execute();
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $exc) {
+            die($exc->getMessage());
+        }
+    }
+
     public function Obtener($id) {
         try {
             $stm = $this->pdo->prepare("SELECT * FROM prevista WHERE numPrevista = ?");
@@ -46,14 +58,14 @@ class Prevista {
                     ->execute(array($data->numPrevista, $data->ubicacion, $data->tipoPrevista, $data->dueño)
             );
         } catch (Exception $exc) {
-            die ($exc->getMessage());
+            die($exc->getMessage());
         }
     }
-    
+
     public function Actualizar($data) {
         try {
             $sql = "UPDATE prevista SET ubicacion = ?, tipoPrevista = ?, dueño = ? WHERE numPrevista = ?";
-            
+
             $this->pdo->prepare($sql)
                     ->execute(array($data->ubicacion, $data->tipoPrevista, $data->dueño, $data->numPrevista)
             );
@@ -61,7 +73,7 @@ class Prevista {
             die($exc->getMessage());
         }
     }
-    
+
     public function Guardar(Prevista $data) {
         try {
             $sql = "INSERT INTO prevista (numPrevista,ubicacion,tipoPrevista,dueño)

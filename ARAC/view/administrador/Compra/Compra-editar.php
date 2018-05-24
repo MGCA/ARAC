@@ -36,7 +36,7 @@
     
     <div class="form-group">
         <label>Fecha: </label>
-        <input type="date" name="fecha" value="<?php echo $compra->fecha; ?>" class="form-control" placeholder="Ingrese el Correo" data-validacion-tipo="requerido" />
+        <input type="date" name="fechaCompra" value="<?php echo $compra->fechaCompra; ?>" class="form-control" placeholder="Ingrese el Correo" data-validacion-tipo="requerido" />
     </div>
     
     <div class="form-group">

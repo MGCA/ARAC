@@ -32,7 +32,7 @@
     
     <div class="form-group">
         <label>Fecha: </label>
-        <input type="date" name="fecha" class="form-control " placeholder="Ingrese la fecha" data-validacion-tipo="requerido" />
+        <input type="date" name="fechaCompra" value="<?php echo date("yyyy/mm/dd"); ?>" class="form-control " placeholder="Ingrese la fecha" data-validacion-tipo="requerido" />
     </div>
     
     <div class="form-group">

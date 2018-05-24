@@ -8,7 +8,7 @@ class Compra{
     public $nombreNegocio;
     public $motivoCompra;
     public $lugarCompra;
-    public $fecha;
+    public $fechaCompra;
     public $montoTotalCompra;
     
     public function __construct() {
@@ -45,11 +45,11 @@ class Compra{
     
      public function Registrar($data) {
         try {
-            $sql = "INSERT INTO compra (encargadoCompra, nombreNegocio, motivoCompra, lugarCompra, fecha, montoTotalCompra)
-                        VALUE (?,?,?,?,?,?)";
+            $sql = "INSERT INTO compra (numCompra, encargadoCompra, nombreNegocio, motivoCompra, lugarCompra, montoTotalCompra, fechaCompra)
+                        VALUE (?,?,?,?,?,?,?)";
 
             $this->pdo->prepare($sql)
-                    ->execute(array($data->encargadoCompra, $data->nombreNegocio, $data->motivoCompra, $data->lugarCompra, $data->fecha, $data->montoTotalCompra)
+                    ->execute(array($data->numCompra,$data->encargadoCompra, $data->nombreNegocio, $data->motivoCompra, $data->lugarCompra, $data->montoTotalCompra, $data->fechaCompra)
             );
         } catch (Exception $exc) {
             die($exc->getMessage());
@@ -69,10 +69,10 @@ class Compra{
     
     public function Actualizar($data) {
         try {
-            $sql = "UPDATE compra SET encargadoCompra = ?, nombreNegocio = ?, motivoCompra = ?, lugarCompra = ?, fecha = ?, montoTotalCompra = ? WHERE numCompra = ?";
+            $sql = "UPDATE compra SET encargadoCompra = ?, nombreNegocio = ?, motivoCompra = ?, lugarCompra = ?, montoTotalCompra = ?, fechaCompra = ? WHERE numCompra = ?";
             
             $this->pdo->prepare($sql)
-                    ->execute(array($data->encargadoCompra, $data->nombreNegocio, $data->motivoCompra, $data->lugarCompra, $data->fecha, $data->montoTotalCompra, $data->numCompra)
+                    ->execute(array($data->encargadoCompra, $data->nombreNegocio, $data->motivoCompra, $data->lugarCompra, $data->montoTotalCompra, $data->fecha, $data->numCompra)
             );
         } catch (Exception $exc) {
             die($exc->getMessage());

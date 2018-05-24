@@ -1,7 +1,6 @@
 <div class="container">
     <h1 class="page-header text-center">Recibo</h1>
-    <form id="frm-recibo" action="?c=Recibo&a=Guardar" method="post" enctype="multipart/form-data">
-
+    <form id="frm-recibo" action="?c=Recibo&a=Consultar" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <table class="table-responsive">
                 <tr>
@@ -33,32 +32,13 @@
                 </tr>
             </table>
         </div>
-
-        <div class="form-group">
-            <label>Cobra: </label>
-            <input type="text" name="cobra" class="form-control" placeholder="Dijite su Cedula" data-validacion-tipo="requerido" />
-        </div>
-
-        <div class="form-group">
-            <label>Fecha: </label>
-            <input type="date" id="txtfecha" name="fecha" class="form-control" value="<?php echo $mes = date("yyyy/mm/dd"); ?>" required/> 
-        </div>
-
         <div class="form-group">
             <label>Nª de Prevista: </label>
             <input type="text" name="numPrevista"class="form-control" placeholder="Ingrese el Nª de Prevista" data-validacion-tipo="requerido" />
         </div>
 
-        <div name="estadoRadio" id="estadoRadio" class="form-group">
-            <label>Estado: </label>
-            <div class="radio form-control">
-                <label><input type="radio" name="estado" value=0>Pendiente</label>
-                <label><input type="radio" name="estado" value=1>Cancelado</label>
-            </div>
-        </div>   
-
         <div class="text-right">
-            <button class="btn btn-success">Guardar</button>
+            <input type="submit" value="Consultar" name="a" class="btn btn-primary"/>
         </div>
     </form>
     <script>

@@ -33,7 +33,7 @@
                             <li><a href="?c=EmpleadoMantenimiento&a=Index">Empleado</a></li>
                             <li><a href="#">Inventario</a></li>
                             <li><a href="?c=CompraMantenimiento&a=Index">Compras</a></li>
-                            <li><a href="?c=Recibo&a=Consultar">Recibo</a></li>
+                            <li><a href="?c=Recibo&a=Mantenimiento">Recibo</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li>

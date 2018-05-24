@@ -29,6 +29,7 @@ class Socio {
             die($exc->getMessage());
         }
     }
+    
 
     public function Obtener($id) {
         try {

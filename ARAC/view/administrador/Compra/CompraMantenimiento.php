@@ -36,7 +36,7 @@
                     <td><?php echo $c->nombreNegocio ?></td>
                     <td><?php echo $c->motivoCompra ?></td>
                     <td><?php echo $c->lugarCompra ?></td>
-                    <td><?php echo $c->fecha ?></td>
+                    <td><?php echo $c->fechaCompra ?></td>
                     <td><?php echo $c->montoTotalCompra ?></td>                 
                 </tr>
             <?php endforeach; ?>
