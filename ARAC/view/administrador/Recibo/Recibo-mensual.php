@@ -3,7 +3,7 @@
 </h1>
 
 <ol class="breadcrumb">
-    <li><a href="?c=Recibo">Socios</a></li>
+    <li><a href="?c=Recibo&a=Mantenimiento">Recibo</a></li>
     <li class="active"><?php echo 'Generar Recibo'; ?></li>
 </ol>
 
@@ -37,8 +37,8 @@
     <div name="estadoRadio" id="estadoRadio" class="form-group">
         <label>Estado: </label>
         <div class="radio form-control">
-            <label><input type="radio" name="estado" value=0>Pendiente</label>
-            <label><input type="radio" name="estado" value=1>Cancelado</label>
+            <label><input type="radio" name="estado" value=0 required>Pendiente</label>
+            <label><input type="radio" name="estado" value=1 required>Cancelado</label>
         </div>
     </div>   
 

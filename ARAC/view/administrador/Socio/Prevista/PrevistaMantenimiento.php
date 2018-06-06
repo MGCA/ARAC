@@ -21,7 +21,7 @@
                 <th style="width:125px;">N° Prevista</th>
                 <th style="width:125px;">Ubicacion</th>
                 <th style="width:125px;">Tipo de Prevista</th>
-                <th style="width:125px;">Dueño</th>               
+                <th style="width:125px;">Propietario</th>               
             </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
                     <td><?php echo $r->numPrevista; ?></td>
                     <td><?php echo $r->ubicacion; ?></td>
                     <td><?php echo $r->tipoPrevista; ?></td>
-                    <td><?php echo $r->dueño; ?></td>             
+                    <td><?php echo $r->propietario; ?></td>             
                 </tr>
             <?php endforeach; ?>
         <script src="archivos/js/buscador.js"></script>

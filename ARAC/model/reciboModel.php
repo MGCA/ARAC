@@ -6,11 +6,11 @@ class Recibo {
     public $numRecibo;
     public $cobra;
     public $numPrevista;
-    public $medidor;
     public $mes;
-    public $fecha;
+    public $fechaPago;
     public $fechaVencimiento;
     public $estado;
+    public $monto;
     
 
     function __construct() {
@@ -46,6 +46,9 @@ class Recibo {
     }
     
     
+
+
+
     
     
     
@@ -64,25 +67,27 @@ class Recibo {
 
     public function Registrar($data) {
         try {
-            $sql = "UPDATE recibo SET cobra = ?, fecha = ?, estado = ? WHERE numPrevista = ? and mes = ?";
-            
+            $sql = "UPDATE recibo SET cobra = ?, fechaPago = ?, estado = ?, monto = ? WHERE numPrevista = ? and mes = ?";
+               
             $this->pdo->prepare($sql)
-                    ->execute(array($data->cobra, $data->fecha, $data->estado, $data->numPrevista, $data->mes)
+                    ->execute(array($data->cobra, $data->fechaPago, $data->estado, $data->monto, $data->numPrevista, $data->mes)                           
             );
+            echo'<script>alert("Transaccion Compleatada")</script>';
         } catch (Exception $exc) {
-            die($exc->getMessage());
+            echo'<script>alert("Empleado incorrecto")</script>';
+            
         }
     }
 
     public function Guardar(Recibo $data) {
         try {
-            $sql = "INSERT INTO recibo (numRecibo,cobra,numPrevista,medidor,mes,fecha,fechavencimiento,estado)
+            $sql = "INSERT INTO recibo (numRecibo,cobra,numPrevista,mes,fechaPago,fechavencimiento,estado,monto)
                         VALUE (?,?,?,?,?,?,?,?)";
 //Aqui llamamos todas las previstas y creamos un mes pendiente a cancelar
             foreach ($this->cargarPrevistas() as $a) {
-                $data->numPrevista = $data->medidor = $a->numPrevista;
+                $data->numPrevista = $a->numPrevista;
               $this->pdo->prepare($sql)
-                    ->execute(array($data->numRecibo, $data->cobra, $data->numPrevista, $data->medidor, $data->mes, $data->fecha, $data->fechaVencimiento, $data->estado)
+                    ->execute(array($data->numRecibo, $data->cobra, $data->numPrevista, $data->mes, $data->fechaPago, $data->fechaVencimiento, $data->estado, $data->monto)
             );  
             }
             

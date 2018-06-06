@@ -26,7 +26,7 @@
                             <input type="password" class="form-control">
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-default">Enviar</button>
+                        <button type="submit" class="btn btn-default">Ingresar</button>
                     </form>
 
                 </div>

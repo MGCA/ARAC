@@ -11,11 +11,15 @@
     </head>    
     <body>
         <div class="container">
-            <header>
+            <header id="encabeazado">
 
-                <div class="jumbotron">
-                    <h1 class="text-center">Mantenimiento del Sistema</h1>
+                <div class="jumbotron">         
+                    
+                    <h1 class="text-center">Mantenimiento del Sistema                           
+                                 <img src="archivos/imagenes/ajustes.png" width="100" height="100" class="img-thumbnail"></h1>
+
                 </div>
+
 
                 <nav class="navbar navbar-default ">
                     <div class="navbar-header">
@@ -32,7 +36,7 @@
                             <li><a href="?c=SocioMantenimiento&a=Index">Socio</a></li>
                             <li><a href="?c=EmpleadoMantenimiento&a=Index">Empleado</a></li>
                             <li><a href="#">Inventario</a></li>
-                            <li><a href="?c=CompraMantenimiento&a=Index">Compras</a></li>
+                            <li><a href="?c=CompraMantenimiento&a=Mantenimiento">Compras</a></li>
                             <li><a href="?c=Recibo&a=Mantenimiento">Recibo</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">

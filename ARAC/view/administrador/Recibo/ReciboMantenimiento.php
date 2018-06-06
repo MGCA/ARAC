@@ -31,7 +31,7 @@
                     <td><input type=radio name=numRecibo value=<?php echo $r->numRecibo; ?> ></td>
                     <td><?php echo $r->numRecibo; ?></td>
                     <td><?php echo $r->cobra; ?></td>
-                    <td><?php echo $r->fecha; ?></td>
+                    <td><?php echo $r->fechaPago; ?></td>
                     <td><?php echo $r->fechaVencimiento; ?></td>
                     <td><?php echo $r->numPrevista; ?></td>
                     <td><?php echo $r->estado; ?></td>

@@ -38,13 +38,17 @@
     </div>
 
     <div class="form-group">
-        <label>Tipo de Prevista: </label>
-        <input type="text" name="tipoPrevista"class="form-control" placeholder="Ingrese Comercial/Domestica" data-validacion-tipo="requerido" />
+        <label>Tipo: </label>
+        <select name="tipoPrevista" class=form-control>
+            <option value="1">Domestica</option>
+            <option value="2">Comercial</option>
+            <option value="3">Empresarial</option>
+        </select>
     </div>
 
     <div class="form-group">
-        <label>Dueño: </label>
-        <input type="text" name="dueño"class="form-control" placeholder="Ingrese un Socio o Dueño" data-validacion-tipo="requerido" />
+        <label>Propietario: </label>
+        <input type="text" name="propietario"class="form-control" placeholder="Ingrese un Socio o Dueño" data-validacion-tipo="requerido" />
     </div>
 
     <div class="text-right">

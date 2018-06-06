@@ -53,7 +53,7 @@ class PrevistaMantenimientoController {
         $alm->numPrevista = $_REQUEST['numPrevista'];
         $alm->ubicacion = $_REQUEST['ubicacion'];
         $alm->tipoPrevista = $_REQUEST['tipoPrevista'];
-        $alm->dueño = $_REQUEST['dueño'];
+        $alm->propietario = $_REQUEST['propietario'];
 
         $this->modelPrevista->Obtener($_REQUEST['numPrevista']) ?
                         $this->modelPrevista->Actualizar($alm) :

@@ -6,7 +6,7 @@ class Prevista {
     public $numPrevista;
     public $ubicacion;
     public $tipoPrevista;
-    public $dueño;
+    public $propietario;
 
     public function __construct() {
         try {
@@ -52,10 +52,10 @@ class Prevista {
 
     public function Registrar(Prevista $data) {
         try {
-            $sql = "INSERT INTO prevista (numPrevista,ubicacion,tipoPrevista,dueño)"
+            $sql = "INSERT INTO prevista (numPrevista,ubicacion,tipoPrevista,propietario)"
                     . "VALUE (?,?,?,?)";
             $this->pdo->prepare($sql)
-                    ->execute(array($data->numPrevista, $data->ubicacion, $data->tipoPrevista, $data->dueño)
+                    ->execute(array($data->numPrevista, $data->ubicacion, $data->tipoPrevista, $data->propietario)
             );
         } catch (Exception $exc) {
             die($exc->getMessage());
@@ -64,7 +64,7 @@ class Prevista {
 
     public function Actualizar($data) {
         try {
-            $sql = "UPDATE prevista SET ubicacion = ?, tipoPrevista = ?, dueño = ? WHERE numPrevista = ?";
+            $sql = "UPDATE prevista SET ubicacion = ?, tipoPrevista = ?, propietario = ? WHERE numPrevista = ?";
 
             $this->pdo->prepare($sql)
                     ->execute(array($data->ubicacion, $data->tipoPrevista, $data->dueño, $data->numPrevista)
@@ -76,11 +76,11 @@ class Prevista {
 
     public function Guardar(Prevista $data) {
         try {
-            $sql = "INSERT INTO prevista (numPrevista,ubicacion,tipoPrevista,dueño)
+            $sql = "INSERT INTO prevista (numPrevista,ubicacion,tipoPrevista,propietario)
                         VALUE (?,?,?,?)";
 
             $this->pdo->prepare($sql)
-                    ->execute(array($data->numPrevista, $data->ubicacion, $data->tipoPrevista, $data->dueño)
+                    ->execute(array($data->numPrevista, $data->ubicacion, $data->tipoPrevista, $data->propietario)
             );
         } catch (Exception $exc) {
             die($exc->getMessage());

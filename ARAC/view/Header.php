@@ -14,6 +14,9 @@
         <header>  
             <nav class="navbar navbar-default navbar-static-top">
                 <div class="container">
+                    <div class="col-md-3">
+                        <a title="Inicio" href="Index.php"><img src="archivos/imagenes/logo.jpg" width="180" height="140" class="img-thumbnail"></a>
+                    </div>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Este boton despliega la barra de navegacion</span>
@@ -47,4 +50,5 @@
                 </div>
             </nav>
         </header>
+        <div class="container">
 

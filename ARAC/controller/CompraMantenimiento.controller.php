@@ -12,6 +12,13 @@ class CompraMantenimientoController
 
     public function Index()
     {
+        require_once 'view/Header.php';
+        require_once 'view/administrador/Compra/CompraMantenimiento.php';
+        require_once 'view/Footer.php';
+    }
+    
+    public function Mantenimiento()
+    {
         require_once 'view/HeaderMantenimiento.php';
         require_once 'view/administrador/Compra/CompraMantenimiento.php';
         require_once 'view/Footer.php';

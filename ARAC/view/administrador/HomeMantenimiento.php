@@ -16,7 +16,7 @@
                     contacte a soporte tecnico del sistema.     
                 </p>
                 <br>
-                <a href="Usuario/nuevoUsuario.php">Ya tienes un Usuario?</a>
+                <a href="#">Ya tienes un Usuario?</a>
                 <br>
                 <br>
                 <a href="#">Olvidaste tu contraseña?</a>

@@ -25,8 +25,8 @@
     </div>
     
     <div class="form-group">
-        <label>Dueño: </label>
-        <input type="text" name="dueño" value="<?php echo $alm->dueño; ?>" class="form-control" placeholder="Asigne un Socio o Dueño" data-validacion-tipo="requerido" />
+        <label>Propietario: </label>
+        <input type="text" name="propietario" value="<?php echo $alm->dueño; ?>" class="form-control" placeholder="Asigne un Socio o Dueño" data-validacion-tipo="requerido" />
     </div>
     
     <div class="text-right">
